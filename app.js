@@ -10,8 +10,8 @@ const MongoStore = require("connect-mongo");
 const connectEnsureLogin = require("connect-ensure-login"); // to redirect user where he/she requested after successfully logged in
 const { roles } = require("./utils/constants");
 
-const username = encodeURIComponent("new-user123");
-const password = encodeURIComponent("new123");
+const username = encodeURIComponent(process.env.DB_USERNAME);
+const password = encodeURIComponent(process.env.DB_PASSWORD);
 
 // MongoDB URI
 const dbURI =
